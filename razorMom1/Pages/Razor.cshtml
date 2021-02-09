@@ -9,12 +9,22 @@
     <h1 class="display-4 text-center">@ViewData["Title"]</h1>
     <h2><b>Information</b></h2><br />
     <h4><b>Datum/klockslag: </b>@DateTime.UtcNow</h4><br />
-    <p>
-        Idag är det Måndag!
-    </p>
+    @{
+        var weekday = DateTime.Now.DayOfWeek;
+        string weekDayConverted = Convert.ToString(weekday);
+        if (weekDayConverted == "Monday")
+        {
+            <p>Idag är Måndag!</p>
+        }
+        else
+        {
+            <p>Idag är det INTE Måndag!</p>
+        }
+    }
+
     <h4><b>Kurser jag har läst: </b></h4>
     @{List<Course> CourseList = new List<Course>
-                        ();
+                          ();
 
         CourseList.Add(new Course("DT057G", "Webbutveckling I"));
         CourseList.Add(new Course("DT084G", "Introduktion till programmering i JavaScript"));
