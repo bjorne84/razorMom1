@@ -63,11 +63,11 @@ body {
   margin-bottom: 60px;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /*line-height: 60px;  Vertically center the text there */
 }
 
 
@@ -91,6 +91,14 @@ header {
     justify-content: space-between;
     max-width: 1440px;
     padding: 1em;
+}
+.dateContainer {
+    display: flex;
+    align-items: end;
+}
+
+#logo {
+    max-width: 100px;
 }
 
 /* Wrapper for the date*/
@@ -120,6 +128,7 @@ main {
     flex-direction: row;
     min-height: 20em;
     max-width: 1220px;
+    padding-bottom: 2em;
 }
 
 /* wraps the content*/
@@ -130,10 +139,11 @@ main {
 
 /*Navigation*/
 aside {
-    width: 20%;
+    width: 0%;
     background-color: #d9eaf4;
     border: 3px solid #3c6fa4;
     border-radius: 0.2em;
+
 }
 .sideNav ul {
     margin: 0 auto;
@@ -163,4 +173,174 @@ aside {
     border: 3px solid #3c6fa4;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+/*Navigation*/
+/*NAV*/
+.navHold {
+    width: 100%;
+    padding-right: 10em;
+}
+
+.nav ul {
+    padding-right: 0;
+    width: 80%;
+}
+.nav {
+    -webkit-transition: right 0.5s ease;
+    -moz-transition: right 0.5s ease;
+    -o-transition: right 0.5s ease;
+    transition: right 0.5s ease;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    height: 100vh;
+    right: -22rem;
+    padding: 6rem 2rem 2rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 22rem;
+    z-index: 1;
+ 
+}
+aside.nav.expanded {
+    display:block;
+}
+    .nav.expanded {
+        right: 0;
+        background-color:black;
+        z-index: 500;
+    }
+
+    .nav ul {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+/* Style & animate the hamburger trigger when the menu is opened and closed.*/
+
+.nav-toggle {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    height: 2rem;
+    right: 20px;
+    position: fixed;
+    top: 20px;
+    width: 3.4rem;
+    z-index: 1000;
+}
+
+    .nav-toggle:hover {
+        opacity: 0.8;
+    }
+
+    .nav-toggle .nav-toggle-bar, .nav-toggle .nav-toggle-bar::after, .nav-toggle .nav-toggle-bar::before {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        background: white;
+        content: '';
+        height: 0.4rem;
+        width: 100%;
+    }
+
+    .nav-toggle .nav-toggle-bar {
+        margin-top: 0;
+        box-shadow: 0px 0px 20px 10px #434444;
+    }
+
+        .nav-toggle .nav-toggle-bar::after {
+            margin-top: 0.8rem;
+        }
+
+        .nav-toggle .nav-toggle-bar::before {
+            margin-top: -0.8rem;
+        }
+
+    .nav-toggle.expanded .nav-toggle-bar {
+        background: transparent;
+    }
+
+        .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
+            background: white;
+            margin-top: 0;
+        }
+
+        .nav-toggle.expanded .nav-toggle-bar::after {
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .nav-toggle.expanded .nav-toggle-bar::before {
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+
+@media screen and (min-width: 990px) {
+
+    .dateContainer {
+        display: block;
+    }
+    aside {
+        width: 20%;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        position: relative;
+        /*position: right 0;*/
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        display: block;
+        padding: 0;
+    }
+        .nav ul {
+            display: flex;
+            flex-direction: column;
+            min-width: 100%;
+        }
+
+
+
+.li:nth-of-type(1) {
+    margin-left: auto;
+}
+
+.li {
+    margin-left: 1em;
+}
+
+
+
+.menuText:hover {
+    transition: ease-in 1ms;
+    color: #c9c7c6;
+}
+
+    #logo {
+        max-width: 200px;
+    }
 }

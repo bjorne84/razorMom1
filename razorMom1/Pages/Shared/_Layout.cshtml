@@ -11,18 +11,21 @@
     <header>
         <div class="container headContainer">
             <div class="logoContainer">
-                <a class="logoLink" asp-area="" asp-page="/Start"><img src="/files/logomoment1.png" /></a>
+                <a class="logoLink" asp-area="" asp-page="/Start"><img id="logo" alt="Bild på logotyp" src="/files/logomoment1.png" /></a>
             </div>
             <div class="dateContainer">
                 <div class="dateWrapper">
                     <p>Dagens datum är: @DateTime.Now.ToShortDateString()</p>
                 </div>
             </div>
+            <div class="nav-toggle">
+                <div class="nav-toggle-bar"></div>
+            </div>
         </div>
     </header>
     <div class="container middleContainer">
         <aside>
-            <nav class="sideNav">
+            <nav class="sideNav nav">
                 <ul>
                     <li class="liNav">
                         <a class="nav-link textNav" asp-area="" asp-page="/Start">Start</a>
@@ -43,7 +46,7 @@
 
     <footer class="footer text-muted">
         <div class="container footContainer">
-            Av Björn Edin  &copy; @DateTime.Now.ToString("yyyy") - kontakta mig via e-post:
+            <p>Av Björn Edin  &copy; @DateTime.Now.ToString("yyyy") - kontakta mig via e-post:</p>
             <a href="mailto: bjed1500@student.miun.se">bjed1500@student.miun.se</a>
         </div>
     </footer>
