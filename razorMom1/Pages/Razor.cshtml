@@ -1,4 +1,5 @@
 ﻿@page
+
 @model razorMom1.Pages.RazorModel
 @{
     ViewData["Title"] = "Razor";
@@ -12,5 +13,28 @@
         Idag är det Måndag!
     </p>
     <h4><b>Kurser jag har läst: </b></h4>
+    @{List<Course> CourseList = new List<Course>
+                        ();
 
+        CourseList.Add(new Course("DT057G", "Webbutveckling I"));
+        CourseList.Add(new Course("DT084G", "Introduktion till programmering i JavaScript"));
+        CourseList.Add(new Course("GD008G", "Typografi och form för webb"));
+        CourseList.Add(new Course("DT163G", "Digital bildbeahndling för webb"));
+        CourseList.Add(new Course("DT152G", "Webbdesign för CMS"));
+        CourseList.Add(new Course("DT193G", "Webbutveckling II"));
+        CourseList.Add(new Course("DT003G", "Databaser"));
+        CourseList.Add(new Course("DT152G", "JavaScriptbaserad webbutveckling"));
+        CourseList.Add(new Course("DT173G", "Webbutveckling III"));
+        CourseList.Add(new Course("IK060G", "Projektledning"));
+        CourseList.Add(new Course("DT071G", "Programmering i C#.NET"));
+        CourseList.Add(new Course("IG021G", "Affärsplaner och kommersialisering"));
+        CourseList.Add(new Course("DT102G ", "ASP.NET med C#"));
+    }
+    <ul>
+        @{ foreach (var item in CourseList)
+            {
+                <li> @item.CourseID @item.CourseName</li>
+            }
+        }
+    </ul>
 </div>

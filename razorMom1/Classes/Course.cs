@@ -1,24 +1,16 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using razorMom1.Classes;
 
-namespace razorMom1.Pages
+namespace razorMom1.Classes
 {
-    public class RazorModel : PageModel
-    {
-
-     
-    }
     public class Course
     {
         private string courseId;
         private string courseName;
 
-        public Course(string courseId, string courseName)
+        public Course (string courseId, string courseName)
         {
             this.courseId = courseId;
             this.courseName = courseName;
@@ -35,7 +27,9 @@ namespace razorMom1.Pages
             get { return courseName; }
             set { courseName = value; }
         }
-
+    
     }
 
 }
+
+
