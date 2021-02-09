@@ -122,6 +122,12 @@ main {
     max-width: 1220px;
 }
 
+/* wraps the content*/
+.mainContent {
+    max-width: 45em;
+    padding-left: 2em;
+}
+
 /*Navigation*/
 aside {
     width: 20%;
