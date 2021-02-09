@@ -14,7 +14,9 @@
                 <a class="logoLink" asp-area="" asp-page="/Start"><img src="/files/logomoment1.png" /></a>
             </div>
             <div class="dateContainer">
-                <p>Dagens datum är: @DateTime.Now.ToShortDateString()</p>
+                <div class="dateWrapper">
+                    <p>Dagens datum är: @DateTime.Now.ToShortDateString()</p>
+                </div>
             </div>
         </div>
     </header>
@@ -39,8 +41,8 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer class="footer text-muted">
+        <div class="container footContainer">
             &copy; 2021 - razorMom1 - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>

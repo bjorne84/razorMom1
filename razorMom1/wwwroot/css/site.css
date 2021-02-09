@@ -77,26 +77,58 @@ body {
   ----------------------------------------------*/
 
 /* Header*/
+header {
+    background-color: #d9eaf4;
+    border-bottom: 4px solid #3c6fa4;
+    margin-bottom: 1em;
+}
 .headContainer {
     display: flex;
     flex-direction: row;
     /* Makes spaces between the two divs så each is placed in each corner*/
     justify-content: space-between;
-    max-width: 1220px;
+    max-width: 1440px;
     padding: 1em;
 }
+
+/* Wrapper for the date*/
+.dateWrapper {
+    background-color: white;
+    height: auto;
+    border: 3px solid #3c6fa4;
+    border-radius: 0.2em;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+/* MAIN*/
+main {
+    width: 80%;
+}
+
+
 /* Wraprs side-nav and main*/
 .middleContainer {
     display: flex;
     flex-direction: row;
+    min-height: 20em;
+    max-width: 1220px;
 }
 
 aside {
     width: 20%;
-    border: 1px solid #000000;
-    background-color: darkgrey;
+    background-color: #d9eaf4;
+    border: 3px solid #3c6fa4;
+    border-radius: 0.2em;
 }
 
-main {
-    width: 80%;
+/* Footer */
+.footContainer {
+    min-width: 94%;
+    text-align: center;
+    background-color: #d9eaf4;
+    border: 3px solid #3c6fa4;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
